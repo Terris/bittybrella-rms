@@ -21,7 +21,7 @@ const MenusLayout = (props) => {
           <div className="ml-1 leading-loose">New Menu</div>
         </Link>
       </header>
-      <main className="mx-4 pb-4">{props.children}</main>
+      <main className="pb-4">{props.children}</main>
     </AdminLayout>
   )
 }
