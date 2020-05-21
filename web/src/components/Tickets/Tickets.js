@@ -51,7 +51,7 @@ const TicketsList = ({ tickets }) => {
           {tickets.map((ticket) => (
             <tr key={ticket.id}>
               <td>{truncate(ticket.id)}</td>
-              <td>{truncate(ticket.settled)}</td>
+              <td>{truncate(ticket.settled ? 'settled' : 'open')}</td>
               <td>{timeTag(ticket.createdAt)}</td>
               <td>
                 <nav className="table-actions">

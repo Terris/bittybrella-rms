@@ -154,10 +154,12 @@ a.btn.btn-small {
 ::placeholder {
   color: #ccc;
 }
-input {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
   -webkit-appearance: none;
 }
-input,
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -173,7 +175,6 @@ input[type="number"] {
   transition: border-color 0.2s ease;
 }
 /* hover */
-input:hover,
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="password"]:hover,
@@ -181,7 +182,6 @@ input[type="number"]:hover {
   border-bottom: 2px solid #a7a7a7;
 }
 /* focus */
-input:focus,
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
@@ -196,6 +196,10 @@ input[type="password"]:disabled,
 input[type="number"]:disabled {
   cursor: not-allowed;
   color: #ccc;
+}
+
+input[type="checkbox"] {
+  display: block;
 }
 
 /* Label

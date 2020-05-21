@@ -32,6 +32,7 @@ export const Success = ({ ticket }) => {
   )
 
   const onSave = (input, id) => {
+    input.settled = input.settled === 'true' ? true : false
     updateTicket({ variables: { id, input } })
   }
 
