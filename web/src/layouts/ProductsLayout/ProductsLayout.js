@@ -1,29 +1,28 @@
+import AdminLayout from 'src/layouts/AdminLayout'
 import { Link, routes } from '@redwoodjs/router'
 
 const ProductsLayout = (props) => {
   return (
-    <div className="rw-scaffold">
-      <div className="bg-white font-sans">
-        <header className="flex justify-between py-4 px-8">
-          <h1 className="text-xl font-semibold">
-            <Link
-              to={routes.products()}
-              className="text-gray-700 hover:text-gray-900 hover:underline"
-            >
-              Products
-            </Link>
-          </h1>
+    <AdminLayout>
+      <header className="flex justify-between py-4">
+        <h1 className="text-xl font-semibold">
           <Link
-            to={routes.newProduct()}
-            className="flex bg-green-500 hover:bg-green-600 text-white text-xs font-semibold px-3 py-1 uppercase tracking-wide rounded"
+            to={routes.products()}
+            className="text-gray-700 hover:text-gray-900 hover:underline"
           >
-            <div className="text-xl leading-none">+</div>
-            <div className="ml-1 leading-loose">New Product</div>
+            Products
           </Link>
-        </header>
-        <main className="mx-4 pb-4">{props.children}</main>
-      </div>
-    </div>
+        </h1>
+        <Link
+          to={routes.newProduct()}
+          className="flex bg-green-500 hover:bg-green-600 text-white text-xs font-semibold px-3 py-1 uppercase tracking-wide rounded"
+        >
+          <div className="text-xl leading-none">+</div>
+          <div className="ml-1 leading-loose">New Product</div>
+        </Link>
+      </header>
+      <main className=" pb-4">{props.children}</main>
+    </AdminLayout>
   )
 }
 

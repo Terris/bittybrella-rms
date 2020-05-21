@@ -59,8 +59,10 @@ const ProductsList = ({ products }) => {
               <td className="p-3">{truncate(product.id)}</td>
               <td className="p-3">{truncate(product.name)}</td>
               <td className="p-3">{truncate(product.description)}</td>
-              <td className="p-3">{truncate(product.price)}</td>
-              <td className="p-3">{truncate(product.cost)}</td>
+              <td className="p-3">
+                {truncate('$' + product.price.toFixed(2))}
+              </td>
+              <td className="p-3">{truncate('$' + product.cost.toFixed(2))}</td>
               <td className="p-3">{timeTag(product.createdAt)}</td>
               <td className="p-3 pr-4 text-right whitespace-no-wrap">
                 <nav>

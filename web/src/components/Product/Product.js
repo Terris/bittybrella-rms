@@ -34,20 +34,29 @@ const Product = ({ product }) => {
             <tr className="odd:bg-gray-100 even:bg-white border-t">
               <td className="font-semibold p-3 text-right md:w-1/5">id</td>
               <td className="p-3">{product.id}</td>
-            </tr><tr className="odd:bg-gray-100 even:bg-white border-t">
+            </tr>
+            <tr className="odd:bg-gray-100 even:bg-white border-t">
               <td className="font-semibold p-3 text-right md:w-1/5">name</td>
               <td className="p-3">{product.name}</td>
-            </tr><tr className="odd:bg-gray-100 even:bg-white border-t">
-              <td className="font-semibold p-3 text-right md:w-1/5">description</td>
+            </tr>
+            <tr className="odd:bg-gray-100 even:bg-white border-t">
+              <td className="font-semibold p-3 text-right md:w-1/5">
+                description
+              </td>
               <td className="p-3">{product.description}</td>
-            </tr><tr className="odd:bg-gray-100 even:bg-white border-t">
+            </tr>
+            <tr className="odd:bg-gray-100 even:bg-white border-t">
               <td className="font-semibold p-3 text-right md:w-1/5">price</td>
-              <td className="p-3">{product.price}</td>
-            </tr><tr className="odd:bg-gray-100 even:bg-white border-t">
+              <td className="p-3">${product.price.toFixed(2)}</td>
+            </tr>
+            <tr className="odd:bg-gray-100 even:bg-white border-t">
               <td className="font-semibold p-3 text-right md:w-1/5">cost</td>
-              <td className="p-3">{product.cost}</td>
-            </tr><tr className="odd:bg-gray-100 even:bg-white border-t">
-              <td className="font-semibold p-3 text-right md:w-1/5">createdAt</td>
+              <td className="p-3">${product.cost.toFixed(2)}</td>
+            </tr>
+            <tr className="odd:bg-gray-100 even:bg-white border-t">
+              <td className="font-semibold p-3 text-right md:w-1/5">
+                createdAt
+              </td>
               <td className="p-3">{product.createdAt}</td>
             </tr>
           </tbody>
