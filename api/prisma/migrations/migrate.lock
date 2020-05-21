@@ -3,5 +3,4 @@
 # Prisma Migrate lockfile v1
 # Read more about conflict resolution here: TODO
 
-20200520160326-create-products
-20200520203039-create-menu
+20200521124653-create-products-and-menus

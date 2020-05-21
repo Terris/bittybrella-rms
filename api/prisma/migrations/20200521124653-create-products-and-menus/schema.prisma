@@ -12,17 +12,19 @@ generator client {
 // migrations for them.
 
 model Product {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   name        String
   description String
   price       Float
   cost        Float
-  createdAt   DateTime @default(now())
+  menus       Menu[]    @relation(references: [id])
+  createdAt   DateTime  @default(now())
 }
 
 model Menu {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   name        String
   description String
-  createdAt   DateTime @default(now())
+  products    Product[]   @relation(references: [id])
+  createdAt   DateTime  @default(now())
 }
