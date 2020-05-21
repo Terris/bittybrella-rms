@@ -15,7 +15,7 @@ export const QUERY = gql`
 
 export const Loading = () => <div className="loader">Loading...</div>
 
-export const Empty = () => <div>Product not found</div>
+export const Empty = () => <p>Product not found</p>
 
 export const Success = ({ product }) => {
   return <Product product={product} />

@@ -13,7 +13,7 @@ export const QUERY = gql`
 
 export const Loading = () => <div className="loader">Loading...</div>
 
-export const Empty = () => <div>Menu not found</div>
+export const Empty = () => <p>Menu not found</p>
 
 export const Success = ({ menu }) => {
   return <Menu menu={menu} />

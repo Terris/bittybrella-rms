@@ -20,10 +20,10 @@ export const Loading = () => <div className="loader">Loading...</div>
 
 export const Empty = () => {
   return (
-    <>
+    <p>
       {'No menus yet. '}
       <Link to={routes.newMenu()}>{'Create one?'}</Link>
-    </>
+    </p>
   )
 }
 

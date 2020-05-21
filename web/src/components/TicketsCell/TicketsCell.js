@@ -1,14 +1,11 @@
 import { Link, routes } from '@redwoodjs/router'
-import Products from 'src/components/Products'
+import Tickets from 'src/components/Tickets'
 
 export const QUERY = gql`
-  query PRODUCTS {
-    products {
+  query TICKETS {
+    tickets {
       id
-      name
-      description
-      price
-      cost
+      settled
       createdAt
     }
   }
@@ -23,12 +20,12 @@ export const Loading = () => <div className="loader">Loading...</div>
 export const Empty = () => {
   return (
     <p>
-      {'No products yet. '}
-      <Link to={routes.newProduct()}>{'Create one?'}</Link>
+      {'No tickets yet. '}
+      <Link to={routes.newTicket()}>{'Create one?'}</Link>
     </p>
   )
 }
 
-export const Success = ({ products }) => {
-  return <Products products={products} />
+export const Success = ({ tickets }) => {
+  return <Tickets tickets={tickets} />
 }

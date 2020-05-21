@@ -22,14 +22,10 @@ const NewMenu = () => {
   }
 
   return (
-    <div>
-      <header>
-        <h2>New Menu</h2>
-      </header>
-      <div>
-        <MenuForm onSave={onSave} loading={loading} error={error} />
-      </div>
-    </div>
+    <>
+      <h2>New Menu</h2>
+      <MenuForm onSave={onSave} loading={loading} error={error} />
+    </>
   )
 }
 

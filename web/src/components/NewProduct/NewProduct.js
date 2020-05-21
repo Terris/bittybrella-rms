@@ -27,14 +27,10 @@ const NewProduct = () => {
   }
 
   return (
-    <div>
-      <header>
-        <h2>New Product</h2>
-      </header>
-      <div>
-        <ProductForm onSave={onSave} loading={loading} error={error} />
-      </div>
-    </div>
+    <>
+      <h2>New Product</h2>
+      <ProductForm onSave={onSave} loading={loading} error={error} />
+    </>
   )
 }
 
