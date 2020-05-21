@@ -20,7 +20,7 @@ const UPDATE_MENU_MUTATION = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div className="loader">Loading...</div>
 
 export const Success = ({ menu }) => {
   const [updateMenu, { loading, error }] = useMutation(UPDATE_MENU_MUTATION, {
@@ -34,13 +34,9 @@ export const Success = ({ menu }) => {
   }
 
   return (
-    <div className="bg-white border rounded-lg overflow-hidden">
-      <header className="bg-gray-300 text-gray-700 py-3 px-4">
-        <h2 className="text-sm font-semibold">Edit Menu {menu.id}</h2>
-      </header>
-      <div className="bg-gray-100 p-4">
-        <MenuForm menu={menu} onSave={onSave} error={error} loading={loading} />
-      </div>
-    </div>
+    <>
+      <h2>Edit Menu {menu.id}</h2>
+      <MenuForm menu={menu} onSave={onSave} error={error} loading={loading} />
+    </>
   )
 }

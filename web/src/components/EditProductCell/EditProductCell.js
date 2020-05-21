@@ -22,7 +22,7 @@ const UPDATE_PRODUCT_MUTATION = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div className="loader">Loading...</div>
 
 export const Success = ({ product }) => {
   const [updateProduct, { loading, error }] = useMutation(
@@ -41,18 +41,14 @@ export const Success = ({ product }) => {
   }
 
   return (
-    <div className="bg-white border rounded-lg overflow-hidden">
-      <header className="bg-gray-300 text-gray-700 py-3 px-4">
-        <h2 className="text-sm font-semibold">Edit Product {product.id}</h2>
-      </header>
-      <div className="bg-gray-100 p-4">
-        <ProductForm
-          product={product}
-          onSave={onSave}
-          error={error}
-          loading={loading}
-        />
-      </div>
-    </div>
+    <>
+      <h2>Edit Product {product.id}</h2>
+      <ProductForm
+        product={product}
+        onSave={onSave}
+        error={error}
+        loading={loading}
+      />
+    </>
   )
 }

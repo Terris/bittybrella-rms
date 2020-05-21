@@ -3,7 +3,7 @@ import AdminLayout from 'src/layouts/AdminLayout'
 const AdminPage = () => {
   return (
     <AdminLayout>
-      <h2 className="">Admin Page</h2>
+      <h1>Admin Page</h1>
     </AdminLayout>
   )
 }

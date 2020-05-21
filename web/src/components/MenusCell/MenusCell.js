@@ -1,5 +1,4 @@
 import { Link, routes } from '@redwoodjs/router'
-
 import Menus from 'src/components/Menus'
 
 export const QUERY = gql`
@@ -17,19 +16,14 @@ export const beforeQuery = (props) => {
   return { variables: props, fetchPolicy: 'cache-and-network' }
 }
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div className="loader">Loading...</div>
 
 export const Empty = () => {
   return (
-    <div className="text-center">
+    <>
       {'No menus yet. '}
-      <Link
-        to={routes.newMenu()}
-        className="text-blue-500 underline hover:text-blue-700"
-      >
-        {'Create one?'}
-      </Link>
-    </div>
+      <Link to={routes.newMenu()}>{'Create one?'}</Link>
+    </>
   )
 }
 

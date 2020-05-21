@@ -27,11 +27,11 @@ const NewProduct = () => {
   }
 
   return (
-    <div className="bg-white border rounded-lg overflow-hidden">
-      <header className="bg-gray-300 text-gray-700 py-3 px-4">
-        <h2 className="text-sm font-semibold">New Product</h2>
+    <div>
+      <header>
+        <h2>New Product</h2>
       </header>
-      <div className="bg-gray-100 p-4">
+      <div>
         <ProductForm onSave={onSave} loading={loading} error={error} />
       </div>
     </div>

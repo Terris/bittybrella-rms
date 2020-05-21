@@ -13,7 +13,7 @@ export const QUERY = gql`
   }
 `
 
-export const Loading = () => <div>Loading...</div>
+export const Loading = () => <div className="loader">Loading...</div>
 
 export const Empty = () => <div>Product not found</div>
 

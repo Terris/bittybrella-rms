@@ -1,1 +1,281 @@
+/* Reset
+------------------------------------ */
 
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+html,
+input,
+textarea,
+button {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  color: #424242;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+img {
+  width: 100%;
+}
+svg {
+  max-height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  html,
+  input,
+  textarea,
+  button {
+    font-size: 16px;
+  }
+}
+
+/* Base
+------------------------------------ */
+
+body {
+  font-size: 1rem;
+  background: #f6f6f6;
+  color: #424242;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+.field,
+.mod {
+  line-height: 1.4;
+  padding: 1rem 20px;
+}
+hr {
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  margin: 1rem 20px;
+}
+
+/* Link
+------------------------------------ */
+
+a,
+button {
+  color: #868686;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+a:hover,
+button:hover {
+  color: #444;
+}
+
+/* Lists
+------------------------------------ */
+ul,
+ol {
+  margin-left: 2.5rem;
+}
+li {
+  padding-bottom: 0.25rem;
+}
+nav ol,
+nav ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* Table
+------------------------------------ */
+table { width: 100%; text-align: left; border-collapse: collapse; }
+table td,
+table th { padding: 10px; border-bottom: 1px solid #ccc; }
+.table-actions { display: flex; }
+.table-actions a { padding: 0 10px; }
+
+/* Button
+------------------------------------ */
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+button.btn,
+a.btn {
+  padding: 12px 20px 14px 20px;
+  color: #444;
+  background: #f6f6f6;
+  border-radius: 6px;
+  border: 2px solid #444;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+button.btn:hover,
+a.btn:hover {
+  color: #fff;
+  background: #444;
+}
+button.btn:disabled,
+a.btn:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #fff;
+  cursor: wait;
+}
+
+button.btn.btn-small,
+a.btn.btn-small {
+  padding: 6px 12px 7px 12px;
+}
+
+.btn.btn-alert {
+  border-color: #d86a6a;
+  color: #d86a6a;
+}
+.btn.btn-alert:hover {
+  background: #d86a6a;
+}
+
+/* Input
+------------------------------------ */
+::placeholder {
+  color: #ccc;
+}
+input {
+  -webkit-appearance: none;
+}
+input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem 0;
+  background: #f6f6f6;
+  border: 1px solid #f6f6f6;
+  border-bottom: 2px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 3px;
+  transition: border-color 0.2s ease;
+}
+/* hover */
+input:hover,
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover {
+  border-bottom: 2px solid #a7a7a7;
+}
+/* focus */
+input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border-bottom: 2px solid #444;
+}
+/* disabled */
+input:disabled,
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="number"]:disabled {
+  cursor: not-allowed;
+  color: #ccc;
+}
+
+/* Label
+------------------------------------ */
+label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9e9e9e;
+}
+
+/* Form Template
+------------------------------------ */
+.fieldrow {
+  display: flex;
+  justify-content: space-between;
+}
+.fieldrow .field {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.form-lang-value {
+  border-bottom: 1px solid #ccc;
+}
+.form-lang-value.blank {
+  font-style: italic;
+}
+
+/* Text Mods
+------------------------------------ */
+.text-center {
+  text-align: center;
+}
+.text-muted {
+  color: #a5a2a2;
+}
+
+/* Template
+------------------------------------ */
+
+.header {
+  display: flex;
+  background: #fff;
+}
+.header .logo {
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1;
+}
+.header a { display: block; padding: 20px; line-height: 1; }
+.nav-primary,
+.nav-secondary { display: flex; }
+.nav-secondary { margin-left: auto; }
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-indent: -9999999px;
+}
+.loader:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #444;
+  border-radius: 100%;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
