@@ -14,6 +14,7 @@ const CoreLayout = ({ children }) => {
           <Link to={routes.about()}>About</Link>
         </nav>
         <nav className="nav-secondary">
+          <Link to={routes.admin()}>Admin</Link>
           {isAuthenticated && <a href="#">{currentUser.email}</a>}
           <a href="#" onClick={isAuthenticated ? logOut : logIn}>
             {isAuthenticated ? 'Log Out' : 'Log In'}
