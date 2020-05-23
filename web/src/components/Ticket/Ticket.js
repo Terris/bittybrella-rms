@@ -44,18 +44,11 @@ const Ticket = ({ ticket }) => {
           </tbody>
         </table>
       </div>
-      <nav className="table-actions">
-        <Link
-          to={routes.editTicket({ id: ticket.id })}
-          className="btn btn-small"
-        >
+      <nav className="mod">
+        <Link to={routes.editTicket({ id: ticket.id })} className="btn">
           Edit
         </Link>{' '}
-        <a
-          href="#"
-          onClick={() => onDeleteClick(ticket.id)}
-          className="btn btn-small"
-        >
+        <a href="#" onClick={() => onDeleteClick(ticket.id)} className="btn">
           Delete
         </a>
       </nav>

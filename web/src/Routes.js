@@ -50,6 +50,14 @@ const Routes = () => {
           name="product"
         />
         <Route path="/admin/products" page={ProductsPage} name="products" />
+        <Route path="/admin/users/new" page={NewUserPage} name="newUser" />
+        <Route
+          path="/admin/users/{id:Int}/edit"
+          page={EditUserPage}
+          name="editUser"
+        />
+        <Route path="/admin/users/{id:Int}" page={UserPage} name="user" />
+        <Route path="/admin/users" page={UsersPage} name="users" />
       </Private>
       <Route path="/about" page={AboutPage} name="about" />
       <Route path="/" page={HomePage} name="home" />
