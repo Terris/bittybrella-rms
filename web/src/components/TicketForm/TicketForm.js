@@ -3,8 +3,8 @@ import {
   FormError,
   FieldError,
   Label,
-  HiddenField,
   CheckboxField,
+  SelectField,
   Submit,
 } from '@redwoodjs/web'
 
@@ -23,6 +23,11 @@ const TicketForm = (props) => {
           defaultValue={true}
           defaultChecked={props.ticket?.settled}
         />
+        <FieldError name="settled" />
+      </div>
+      <div className="field">
+        <Label name="products">Products</Label>
+        <SelectField name="products" multiple />
         <FieldError name="settled" />
       </div>
       <div className="field">

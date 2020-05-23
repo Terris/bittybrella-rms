@@ -21,6 +21,7 @@ const NewTicket = () => {
   )
 
   const onSave = (input) => {
+    input.settled = input.settled === 'true' ? true : false
     createTicket({ variables: { input } })
   }
 
