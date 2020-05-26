@@ -22,7 +22,9 @@ export const schema = gql`
   }
 
   type Mutation {
-    createProductsOnTicket(input: CreateProductsInput!): ProductsOnTicket!
+    createProductsOnTicket(
+      input: CreateProductsOnTicketInput!
+    ): ProductsOnTicket!
     updateProductsOnTicket(
       id: Int!
       input: UpdateProductsOnTicketInput!
