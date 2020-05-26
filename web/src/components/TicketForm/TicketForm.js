@@ -17,11 +17,7 @@ const TicketForm = (props) => {
       <FormError error={props.error} />
       <div className="field">
         <Label name="settled">Settled</Label>
-        <CheckboxField
-          name="settled"
-          defaultValue={true}
-          defaultChecked={props.ticket?.settled}
-        />
+        <CheckboxField name="settled" defaultChecked={props.ticket?.settled} />
         <FieldError name="settled" />
       </div>
       <div className="field">
