@@ -1,6 +1,6 @@
 datasource DS {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -48,7 +48,6 @@ model StockItem {
   id          Int       @id @default(autoincrement())
   name        String
   quantity    Int       @default(0)
-  par         Int
   cost        Float
   categories  StockCategory[]
   createdAt   DateTime  @default(now())

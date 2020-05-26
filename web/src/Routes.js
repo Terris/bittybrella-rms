@@ -50,6 +50,46 @@ const Routes = () => {
           name="product"
         />
         <Route path="/admin/products" page={ProductsPage} name="products" />
+        <Route
+          path="/admin/stock-items/new"
+          page={NewStockItemPage}
+          name="newStockItem"
+        />
+        <Route
+          path="/admin/stock-items/{id:Int}/edit"
+          page={EditStockItemPage}
+          name="editStockItem"
+        />
+        <Route
+          path="/admin/stock-items/{id:Int}"
+          page={StockItemPage}
+          name="stockItem"
+        />
+        <Route
+          path="/admin/stock-items"
+          page={StockItemsPage}
+          name="stockItems"
+        />
+        <Route
+          path="/admin/stock-categories/new"
+          page={NewStockCategoryPage}
+          name="newStockCategory"
+        />
+        <Route
+          path="/admin/stock-categories/{id:Int}/edit"
+          page={EditStockCategoryPage}
+          name="editStockCategory"
+        />
+        <Route
+          path="/admin/stock-categories/{id:Int}"
+          page={StockCategoryPage}
+          name="stockCategory"
+        />
+        <Route
+          path="/admin/stock-categories"
+          page={StockCategoriesPage}
+          name="stockCategories"
+        />
         <Route path="/admin/users/new" page={NewUserPage} name="newUser" />
         <Route
           path="/admin/users/{id:Int}/edit"

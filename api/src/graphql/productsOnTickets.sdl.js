@@ -5,7 +5,7 @@ export const schema = gql`
   }
 
   type Query {
-    productsOnTickets: [ProductOnTicket!]!
+    productsOnTickets: [ProductsOnTicket!]!
     productsOnTicket(id: Int!): ProductsOnTicket!
   }
 
